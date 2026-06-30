@@ -6,19 +6,46 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'UMM Documentation',
+			description: 'Documentation for UMM',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Introduction',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'What is UMM ?', slug: 'introduction/what-is-umm' },
+						{ label: 'Getting Started', slug: 'introduction/getting-started' },
+						{ label: 'Installation', slug: 'introduction/installation' },
 					],
 				},
 				{
-					label: 'Reference',
-					items: [{ autogenerate: { directory: 'reference' } }],
+					label: 'Mod Guide',
+					items: [{ autogenerate: { directory: 'mod-guide' } }],
+				},
+				{
+					label: 'Plug-in',
+					items: [{ autogenerate: { directory: 'plugin-guide' } }],
+				},
+				{
+					label: 'Theme Guide',
+					items: [{ autogenerate: { directory: 'theme-guide' } }],
+				},
+				{
+					label: 'Games',
+					items: [
+						{
+							label: 'Skyrim',
+							items: [
+								{ label: 'Installing Mods', slug: 'games/skyrim/installation' },
+							],
+						},
+						{
+							label: 'The Witcher III',
+							items: [
+								{ label: 'Installing Mods', slug: 'games/the-witcher-iii/installation' },
+							],
+						},
+					],
 				},
 			],
 		}),
