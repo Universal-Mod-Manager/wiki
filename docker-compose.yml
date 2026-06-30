@@ -1,0 +1,5 @@
+services:
+  wiki:
+    build: .
+    expose:
+      - '8080'
